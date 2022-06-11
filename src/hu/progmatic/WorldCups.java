@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WorldCups {
-    private List<MatchResults> results = new ArrayList<>();
+
     private int year;
     private String host;
     private String confederation;
@@ -24,13 +24,6 @@ public class WorldCups {
         this.dateTo = parts[4];
     }
 
-    public List<MatchResults> getResults() {
-        return results;
-    }
-
-    public void setResults(List<MatchResults> results) {
-        this.results = results;
-    }
 
     public int getYear() {
         return year;

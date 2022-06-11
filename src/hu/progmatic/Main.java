@@ -60,7 +60,7 @@ public class Main {
 
 
 
-            Map<String,Integer> countGoalsByStage = new TreeMap<>();
+            Map<String,Integer> countGoalsByStage = new LinkedHashMap<>();
             System.out.println("4. Total goals by stage:");
 
             for (MatchResults matchResults : results){
@@ -93,10 +93,6 @@ public class Main {
         }
 
     }
-    
-
-
-
 
 
     private static List<MatchResults> loadMatches(String path)throws IOException{

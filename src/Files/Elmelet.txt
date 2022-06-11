@@ -1,5 +1,28 @@
 1.
 Exceptionök lehetnek checked van unchecked.
+ A Java kivétel , amelyet szándékosan el kell dobni olyan módszerekkel, amelyek nem szeretik a paramétereiket.
+ Ez kiterjeszti a RunTimeException-t, ami azt jelenti, hogy nem kell elkapni.
+ Kivételek: Throwable leszármazottjai. Leszármazási fa:
+
+ Throwable
+ Error - fatális hibák, nem kell őket kezelni
+ Exception
+ RuntimeException - alapból nem kezelendő kivételek, bárhol kiváltódhatnak (NullPointerException, ArrayIndexOutOfBoundsException, stb.)
+ ... - kezelendő kivételek
+ Kivételkezelésre vezérlési szerkezet: try-catch-finally.
+
+ Kezelendő kivételeknél vagy kell megfelelő catch ág, vagy a metódus throws záradékában jeleznünk kell, hogy továbbdobjuk azt!
+
+ Finally ág mindenképpen végrehajtódik!
+
+ Pl.:
+  A nullaval valo osztaskor kivaltodo ArithmeticException leszarmazottja
+          * a RuntimeException-nek, azaz nem kell kotelezoen try-catch blokkba
+          * helyezni vagy nyilatkozni a tovabbdobasarol a throws zaradekban. Viszont
+          * mivel a kovetkezo ilyen hibat okozo sor nincs try-catch blokkban, ezert
+          * a main metodus tovabbdobja es a futtatokornyezet kezeli le, ami egyben a
+          * program veget is jelenti. */
+
 
 
 
@@ -79,3 +102,5 @@ Polymorphism:
 
 
 4.
+
+Mappet kellene használni, és a dátumot szétszedni  int getYearrel külön methodusba, majd ezalapján sorba rakná TreeMap-el vagy LinkedHashMappel.

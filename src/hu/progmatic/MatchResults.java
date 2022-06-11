@@ -1,7 +1,7 @@
 package hu.progmatic;
 
 public class MatchResults {
-    private WorldCups worldCups;
+
     private int year;
     private String stage;
     private String date;
