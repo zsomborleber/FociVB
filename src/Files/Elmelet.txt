@@ -1,0 +1,81 @@
+1.
+Exceptionök lehetnek checked van unchecked.
+
+
+
+
+
+2.Hogyan tudunk egy kollekcióból bejárás közben elemeket törölni?
+
+Iterátorral
+
+Iterator<Results> iterator = results.iterator();
+
+    while (iterator.hasNext(){
+        if(results.getx() !=100 {
+        iterator.remove();
+        }
+}
+
+
+
+
+
+
+3.Ismertesd röviden az OOP koncepciókat a Java-ban.
+
+
+
+Absztrakció
+
+	Elsősorban azt határozza meg, hogy milyen adatoknak kell láthatónak lennie, és mit kell rejteni.
+	Más szavakkal, csak a methodust biztosítja, és nem a belső funkcionalitást.
+	Például amikor mobiltelefont használunk, tudjuk a viselkedését, de nem ismerjük a működésének belső mechanizmusát.
+	Az absztrakció segítségével biztonságosabbá tehetjük az alkalmazást.
+	Például, amikor bejelentkezünk a netbankba, és megadunk egy felhasználónevet és jelszót, a jelszó valójában el van rejtve.
+
+	Használhatjuk az Absztrakciót osztályra, adatra vagy methodusra.
+	Az absztrakció megvalósításához használjuk interfészeket és az absztrakt osztályokat.
+
+Enkapszuláció
+
+	Enkapsziláció egy másik OOP-koncepció a Java-ban, amely külső interfészekből köti össze az adatokat és azok methodusait.
+	Ez azt jelenti, hogy nem engedi,
+	hogy más osztályok közvetlenül hozzáférjenek vagy frissítsék ezeket az adatokat vagy methodusokat.
+	Jó példa maga az osztály, amely szorosan kötődik az adatok és osztályon belüli funkciói.
+	Ennek elérése érdekében a változókat vagy adatokat deklaráljuk ami azt jelenti,
+	hogy az osztályon kívül nem férhetünk hozzájuk.
+	Ezen adatok eléréséhez és frissítéséhez használnunk kell gettert vagy szettert .
+	Ezért a beágyazás segít elrejteni a felhasználó számára az érzékeny adatokat.
+
+	Beágyazás :
+
+    	Adatokat rejt el.
+    	Ez azt jelenti, hogy a változók az osztályon belül vannak beágyazva,
+    	és más osztályok nem férhetnek hozzá közvetlenül.
+    	Csak a public osztály módszerével férhetünk hozzájuk. Így elrejthetjük a fontos adatokat és korlátozhatjuk azok módosítását.
+
+
+
+    	A enkapszuláció egyik legjobb példája a kapszula maga (ahogy a neve is sugallja),
+    	amelyen belül van olyan gyógyszer, amely nem látható számunkra.
+
+Öröklődés:
+
+    Az objektum-osztályok továbbfejlesztésének lehetősége. Ennek során a származtatott osztály örökli ősétől azok attribútumait,
+    és metódusait, de ezeket bizonyos szabályok mellett újakkal egészítheti ki, és meg is változtathatja.
+    Az eredeti osztályt ősosztálynak nevezzük (szülő).
+    Az új, továbbfejlesztett osztályt származtatott osztálynak (gyerek).
+    Egy ősből több leszármaztatott osztályt is készíthetünk.
+
+
+Polymorphism:
+    Ugyanarra a kérelemre a különböző objektumok különbözőképpen reagálnak.
+    A származtatás során az ős osztályok metódusai képesek legyenek az új átdefiniált metódusok használatára újraírás nélkül is.
+    Ezt virtuális metódusokon keresztül érhetjük el.
+
+
+
+
+
+4.

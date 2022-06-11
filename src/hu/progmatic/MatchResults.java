@@ -45,6 +45,12 @@ public class MatchResults {
         return goalsByTeamA >= goalsByTeamB ? goalsByTeamA - goalsByTeamB : goalsByTeamB - goalsByTeamA ;
     }
 
+    public  String toCSV(){
+        return year + ";" + stage + ";" + date +";"
+                + teamA + ";" + teamB + ";"
+                + goalsByTeamA + ";" + goalsByTeamB + ";" + penaltiesA + ";" + getPenaltiesB;
+    }
+
 
 
     public int getYear() {

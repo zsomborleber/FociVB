@@ -3,6 +3,7 @@ package hu.progmatic;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 public class Main {
@@ -13,9 +14,12 @@ public class Main {
 
         System.out.print("Number of matches: ");
         System.out.println(loadMatches("C:\\Users\\Léber Zsombor\\IdeaProjects\\FociVB\\src\\Files\\matches_all.csv").size());
+        saveResults("C:\\Users\\Léber Zsombor\\IdeaProjects\\FociVB\\src\\Files\\matches_all.csv",results);
+
 
 
         try {
+
 
             List<MatchResults> maxgoaldiff = loadMatches("C:\\Users\\Léber Zsombor\\IdeaProjects\\FociVB\\src\\Files\\matches_all.csv");
             System.out.println("Year of worldcup:");
@@ -78,6 +82,18 @@ public class Main {
         }
 
     }
+
+
+    private static void saveResults(String path, Collection<MatchResults> matchResults)throws IOException {
+        try (PrintWriter writer = new PrintWriter(path)){
+            writer.println("stage;date;team_a;team_b;goals_a;goals_b;penalties_a;penalties_b");
+            for (MatchResults saveMatch : matchResults ){
+                writer.println(saveMatch.toCSV());
+            }
+        }
+
+    }
+    
 
 
 
