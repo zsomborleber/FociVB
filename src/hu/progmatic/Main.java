@@ -83,10 +83,6 @@ public class Main {
 
 
 
-
-
-
-
     private static List<MatchResults> loadMatches(String path)throws IOException{
         List<MatchResults> results = new ArrayList<>();
 
