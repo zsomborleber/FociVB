@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
 
-public class Main {
+public class FociVB {
 
     public static void main(String[] args) throws IOException {
         List<MatchResults> results = loadMatches("C:\\Users\\Léber Zsombor\\IdeaProjects\\FociVB\\src\\Files\\matches_all.csv");
