@@ -9,19 +9,19 @@ import java.util.*;
 public class FociVB {
 
     public static void main(String[] args) throws IOException {
-        List<MatchResults> results = loadMatches("C:\\Users\\Léber Zsombor\\IdeaProjects\\FociVB\\src\\Files\\matches_all.csv");
+        List<MatchResults> results = loadMatches();
 
 
         System.out.print("Number of matches: ");
-        System.out.println(loadMatches("C:\\Users\\Léber Zsombor\\IdeaProjects\\FociVB\\src\\Files\\matches_all.csv").size());
-        saveResults("C:\\Users\\Léber Zsombor\\IdeaProjects\\FociVB\\src\\Files\\matches_all.csv",results);
+        System.out.println(loadMatches().size());
+        saveResults(results);
 
 
 
         try {
 
 
-            List<MatchResults> maxgoaldiff = loadMatches("C:\\Users\\Léber Zsombor\\IdeaProjects\\FociVB\\src\\Files\\matches_all.csv");
+            List<MatchResults> maxgoaldiff = loadMatches();
             System.out.println("Year of worldcup:");
 
             Scanner scanner = new Scanner(System.in);
@@ -84,8 +84,8 @@ public class FociVB {
     }
 
 
-    private static void saveResults(String path, Collection<MatchResults> matchResults)throws IOException {
-        try (PrintWriter writer = new PrintWriter(path)){
+    private static void saveResults(Collection<MatchResults> matchResults)throws IOException {
+        try (PrintWriter writer = new PrintWriter("C:\\Users\\Léber Zsombor\\IdeaProjects\\FociVB\\src\\Files\\matches_all.csv")){
             writer.println("stage;date;team_a;team_b;goals_a;goals_b;penalties_a;penalties_b");
             for (MatchResults saveMatch : matchResults ){
                 writer.println(saveMatch.toCSV());
@@ -95,10 +95,10 @@ public class FociVB {
     }
 
 
-    private static List<MatchResults> loadMatches(String path)throws IOException{
+    private static List<MatchResults> loadMatches()throws IOException{
         List<MatchResults> results = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(path))){
+        try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Léber Zsombor\\IdeaProjects\\FociVB\\src\\Files\\matches_all.csv"))){
             String line;
 
             reader.readLine(); // fejléc kihagyása
